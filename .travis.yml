@@ -8,6 +8,6 @@ script:
 after_sucess:
   - docker build -t muzeeburrahman/tele-prj . 
 # Log in to Docker CLI to Push this Prod Image to DockerHub of muzeeburrahman.
-  - echo "$DOCKER_PWD" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push muzeeburrahman/tele-prj
 
