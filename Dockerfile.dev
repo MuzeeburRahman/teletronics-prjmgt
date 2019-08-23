@@ -2,7 +2,6 @@ FROM gradle:jdk11-slim as javabuild
 USER root
 WORKDIR /app
 COPY ./ /app/
-
 RUN gradle clean test jacocoTestCoverageVerification build --no-daemon --info
 
 # UnComment the below To Run Docker Locally 

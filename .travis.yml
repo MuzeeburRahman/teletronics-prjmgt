@@ -2,7 +2,12 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t muzeeburrahman/tele-prj -f  Dockerfile.dev . 
-
+  - docker build -t muzeeburrahman/tele-prj -f Dockerfile.dev . 
 script:
-  - docker run -p 80:80  muzeeburrahman/tele-prj:latest
+  - docker run muzeeburrahman/tele-prj:latest
+after_sucess:
+  - docker build -t muzeeburrahman/tele-prj . 
+# Log in to Docker CLI to Push this Prod Image to DockerHub of muzeeburrahman.
+  - echo "$DOCKER_PWD" | docker login -u "DOCKER_ID" --password-stdin
+  - docker push muzeeburrahman/tele-prj
+
