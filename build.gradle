@@ -2,8 +2,25 @@ plugins {
 	id 'org.springframework.boot' version '2.1.7.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id 'jacoco'
 }
+jacocoTestCoverageVerification {
 
+  	afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude:  [
+            ])
+        })
+    }
+
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.00
+            }
+        }
+    }
+}
 group = 'com.teletronics'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -38,5 +55,14 @@ dependencies {
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.9'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
+task copyToBuild(type: Copy) {
+    from "./src/main/resources"
+    include "*.png"
+    into "./build/classes"
+}
+
+bootJar {
+    archiveName = 'app.jar'
+}
   	
 }
