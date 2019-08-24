@@ -1,4 +1,5 @@
-# Teletronics-Test Project Description
+# Teletronics-Test Project 
+## Description
 1. Setup a GitHub project
 2. Create a Spring Boot service that exposes a REST API on port 80.
 3. Add an endpoint /projects/<username> which respond with a JSON document containing the user’s name and a list of projects. Each project should contain the URL and title of the project and some kind of id.
