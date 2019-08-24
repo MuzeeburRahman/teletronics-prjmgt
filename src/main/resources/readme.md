@@ -1,0 +1,1 @@
+We would like to invite you to do this test project as part of our interview process. This test has been designed for you to show us your ability to design, code, test, and document a small Spring Boot service, based on the short list of requirements described below.

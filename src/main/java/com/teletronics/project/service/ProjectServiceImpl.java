@@ -14,7 +14,6 @@ public class ProjectServiceImpl implements ProjectService {
 	@Autowired
 	private ProjectDao projectRepository;
 
-
 	@Override
 	public User getUserProjects(final String userName) {
 		return projectRepository.getUserProjects(userName);
@@ -22,10 +21,13 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public ProjectDetails getProjectDetails(final String userName,final Long projectId) {
+		
 		FileReaderUtil fileReaderUtil =new FileReaderUtil();
+		
 		ProjectDetails projectDetails =new ProjectDetails();
 		projectDetails=projectRepository.getProjectDetails(userName, projectId);
 		projectDetails.setProjectDesc(fileReaderUtil.readFile());
+		
 		return projectDetails;
 	}
 

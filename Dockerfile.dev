@@ -4,7 +4,7 @@ WORKDIR /app
 COPY ./ /app/
 RUN gradle clean test jacocoTestCoverageVerification build --no-daemon --info
 
-# UnComment the below To Run Docker Locally 
+# Uncomment the below code To Run Docker Locally 
 # FROM openjdk:11-jdk-slim
 # WORKDIR /app
 # COPY --from=javabuild /app/build/libs/app.jar /app/

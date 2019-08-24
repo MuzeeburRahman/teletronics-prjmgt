@@ -9,14 +9,17 @@ import static org.mockito.Mockito.when;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.teletronics.project.dao.ProjectDaoImpl;
 
+
 @DisplayName("ServiceImplTest")
+@ExtendWith(SpringExtension.class)
 public class ProjectServiceImplTest {
 
 	private final String userName = "muzeeb";
@@ -30,7 +33,7 @@ public class ProjectServiceImplTest {
 
 	@BeforeEach
 	void setMockOutput() {
-		MockitoAnnotations.initMocks(this);
+		
 		when(projectDaoImpl.getUserProjects(Mockito.anyString())).thenReturn(mockUser());
 		when(projectDaoImpl.getProjectDetails(userName, projectId)).thenReturn(mockProjectDetails());
 	}
@@ -50,7 +53,7 @@ public class ProjectServiceImplTest {
 	@Test
 	@DisplayName("When Valid Project id then Project Details Should be Found")
 	public void whenProjectId_thenProjectDetailsShouldBeFound() {
-		assertTrue(projectService.getUserProjects(userName).getUserName().equalsIgnoreCase(userName));
+		assertTrue(projectService.getProjectDetails(userName,projectId).getProjectId().equals(projectId));
 	}
 	
 	@Test

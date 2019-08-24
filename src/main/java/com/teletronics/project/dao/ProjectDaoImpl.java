@@ -19,20 +19,20 @@ public class ProjectDaoImpl implements ProjectDao {
 	
 
 	static {
-		Project muzeebProject1 = new Project((long) 10001, "http://localhost:8080//api/projects/muzeeb/10001", "Muzeeb-Project1-Titile");
-		Project muzeebProject2 = new Project((long) 10002, "http://localhost:8080//api/projects/muzeeb/10002", "Muzeeb-Project2-Titile");
-		Project muzeebProject3 = new Project((long) 10003, "http://localhost:8080//api/projects/muzeeb/10003", "Muzeeb-Project3-Titile");
-		Project muzeebProject4 = new Project((long) 10004, "http://localhost:8080//api/projects/muzeeb/10004", "Muzeeb-Project4-Titile");
+		Project muzeebProject1 = new Project((long) 10001, "http://localhost:80//api/projects/muzeeb/10001", "Muzeeb-Project1-Titile");
+		Project muzeebProject2 = new Project((long) 10002, "http://localhost:80//api/projects/muzeeb/10002", "Muzeeb-Project2-Titile");
+		Project muzeebProject3 = new Project((long) 10003, "http://localhost:80//api/projects/muzeeb/10003", "Muzeeb-Project3-Titile");
+		Project muzeebProject4 = new Project((long) 10004, "http://localhost:80//api/projects/muzeeb/10004", "Muzeeb-Project4-Titile");
 		
-		Project rahmanProject1 = new Project((long) 20001, "http://localhost:8080//api/projects/rahman/20001", "Rahman-Project1-Titile");
-		Project rahmanProject2 = new Project((long) 20002, "http://localhost:8080//api/projects/rahman/20002", "Rahman-Project2-Titile");
-		Project rahmanProject3 = new Project((long) 20003, "http://localhost:8080//api/projects/rahman/20003", "Rahman-Project3-Titile");
-		Project rahmanProject4 = new Project((long) 20004, "http://localhost:8080//api/projects/rahman/20004", "Rahman-Project4-Titile");
+		Project rahmanProject1 = new Project((long) 20001, "http://localhost:80//api/projects/rahman/20001", "Rahman-Project1-Titile");
+		Project rahmanProject2 = new Project((long) 20002, "http://localhost:80//api/projects/rahman/20002", "Rahman-Project2-Titile");
+		Project rahmanProject3 = new Project((long) 20003, "http://localhost:80//api/projects/rahman/20003", "Rahman-Project3-Titile");
+		Project rahmanProject4 = new Project((long) 20004, "http://localhost:80//api/projects/rahman/20004", "Rahman-Project4-Titile");
 		
-		Project farooqiProject1 = new Project((long) 30001, "http://localhost:8080//api/projects/farooqi/30001", "Farooqi-Project1-Titile");
-		Project farooqiProject2 = new Project((long) 30002, "http://localhost:8080//api/projects/farooqi/30002", "Farooqi-Project2-Titile");
-		Project farooqiProject3 = new Project((long) 30003, "http://localhost:8080//api/projects/farooqi/30003", "Farooqi-Project3-Titile");
-		Project farooqiProject4 = new Project((long) 30004, "http://localhost:8080//api/projects/farooqi/30004", "Farooqi-Project4-Titile");
+		Project farooqiProject1 = new Project((long) 30001, "http://localhost:80//api/projects/farooqi/30001", "Farooqi-Project1-Titile");
+		Project farooqiProject2 = new Project((long) 30002, "http://localhost:80//api/projects/farooqi/30002", "Farooqi-Project2-Titile");
+		Project farooqiProject3 = new Project((long) 30003, "http://localhost:80//api/projects/farooqi/30003", "Farooqi-Project3-Titile");
+		Project farooqiProject4 = new Project((long) 30004, "http://localhost:80//api/projects/farooqi/30004", "Farooqi-Project4-Titile");
 		
 		List<Project> muzeebProjects = Arrays.asList(muzeebProject1, muzeebProject2, muzeebProject3, muzeebProject4);
 		List<Project> rahmanProjects = Arrays.asList(rahmanProject1, rahmanProject2, rahmanProject3, rahmanProject4);

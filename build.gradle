@@ -57,7 +57,7 @@ dependencies {
 	
 task copyToBuild(type: Copy) {
     from "./src/main/resources"
-    include "*.png"
+    include "*.md"
     into "./build/classes"
 }
 

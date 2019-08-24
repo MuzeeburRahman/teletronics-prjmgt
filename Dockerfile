@@ -5,7 +5,7 @@ USER root
 WORKDIR /app
 COPY ./ /app/
 RUN gradle clean build --no-daemon --info
- 
+
 #Step-2 Copy the app.jar to new POD or Container to Run the Application 
 FROM openjdk:11-jdk-slim
 WORKDIR /app
