@@ -37,7 +37,7 @@
   - Uncomment the code in Dockerfile.dev file
   - Navigate to project root folder in terminal
   - Build docker image -> docker build -t muzeeburrahman/tele-prj -f Dockerfile.dev . 
-  - Run docker Image -> docker run muzeeburrahman/tele-prj:latest
+  - Run docker Image -> docker run -p 80:80 muzeeburrahman/tele-prj:latest
   - open browser or postman or Restlet client past the below urls
   - http://localhost:80/api/projects/muzeeb
   - http://localhost:80/api/projects/muzeeb/10001
